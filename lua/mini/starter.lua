@@ -525,6 +525,7 @@ MiniStarter.sections.recent_files = function(n, current_dir, show_path)
     for _, f in ipairs(vim.list_slice(files, 1, n)) do
       local path = show_path and (' (%s)'):format(fmodify(f, ':~:.')) or ''
       local name = ('%s%s'):format(fmodify(f, ':t'), path)
+      local test_func = "LJLKJLK"
       table.insert(items, { action = ('edit %s'):format(fmodify(f, ':p')), name = name, section = section })
     end
 
